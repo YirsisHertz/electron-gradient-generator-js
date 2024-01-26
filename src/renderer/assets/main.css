@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+
+  background: linear-gradient(to right, #ff0000, #ff6347);
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 60%;
+}
+
+.container .card {
+  background-color: #f2f2f2;
+  border-radius: 1rem;
+  box-shadow: 10px 20px 40px #9f9f9f;
+  padding: 1rem 2rem;
+}
+
+.container .card .color-inputs {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .card .color-inputs input[type='color'] {
+  height: 50px;
+  width: 100px;
+}
+
+.container .card .gradient-orientation {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.container .card .gradient-orientation button {
+  background-color: #fff;
+  margin: 0px 1rem;
+  padding: 1rem;
+}
+
+.container .card .gradient-orientation button.active {
+  background-color: #ddd;
+}
+
+.container .card .gradient-orientation button:hover {
+  cursor: pointer;
+}
+
+.container .card .gradienttext {
+  align-items: center;
+  border-radius: 0.5rem;
+  border: solid 1px #ddd;
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.container .card .gradienttext button.btncopy {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

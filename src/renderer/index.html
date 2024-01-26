@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electron</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+    />
+
+    <link href="./assets/main.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main id="app" class="container">
+      <div class="card">
+        <h1>Gradient Generator</h1>
+
+        <div class="color-inputs">
+          <input type="color" id="firstcolor" value="#ff0000" />
+          <input type="color" id="secondcolor" value="#ff6347" />
+        </div>
+
+        <div class="gradient-orientation">
+          <button class="btnOrientation" data-value="to top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+          </button>
+          <button class="btnOrientation" data-value="to bottom">
+            <i class="bi bi-arrow-down-circle-fill"></i>
+          </button>
+
+          <button class="btnOrientation" data-value="to left">
+            <i class="bi bi-arrow-left-circle-fill"></i>
+          </button>
+          <button class="btnOrientation active" data-value="to right">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+          </button>
+
+          <button class="btnOrientation" data-value="45deg">
+            <i class="bi bi-arrow-up-left-circle-fill"></i>
+          </button>
+          <button class="btnOrientation" data-value="135deg">
+            <i class="bi bi-arrow-up-right-circle-fill"></i>
+          </button>
+
+          <button class="btnOrientation" data-value="225deg">
+            <i class="bi bi-arrow-down-right-circle-fill"></i>
+          </button>
+          <button class="btnOrientation" data-value="315deg">
+            <i class="bi bi-arrow-down-left-circle-fill"></i>
+          </button>
+        </div>
+
+        <div class="gradienttext">
+          <p id="text">linear-gradient(to right, #ff0000, #ff6347)</p>
+
+          <button class="btncopy" id="btncopy">
+            <i class="bi bi-clipboard-fill"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./src/renderer.ts"></script>
+  </body>
+</html>
